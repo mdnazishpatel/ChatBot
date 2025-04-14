@@ -1,0 +1,149 @@
+/* ChatBot.css */
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background-color: #121212;
+    color: #fff;
+    overflow-x: hidden;
+  }
+  
+  /* Chat Container */
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    background: linear-gradient(45deg, #1f1f1f, #444);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+  
+  .chat-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #00bcd4;
+    margin-bottom: 20px;
+  }
+  
+  /* Chat Box */
+  .chat-box {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
+  /* Message Styling */
+  .message {
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 20px;
+    max-width: 80%;
+    line-height: 1.5;
+    word-wrap: break-word;
+    font-size: 1.1em;
+  }
+  
+  .message.user {
+    background-color: #00bcd4;
+    align-self: flex-end;
+    color: white;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .message.ai {
+    background-color: #333;
+    color: white;
+    align-self: flex-start;
+    border-bottom-left-radius: 5px;
+  }
+  
+  /* Input Area */
+  .input-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-top: 2px solid #444;
+  }
+  
+  .chat-input {
+    background-color: #222;
+    color: #fff;
+    width: 85%;
+    padding: 12px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1em;
+    transition: all 0.3s;
+  }
+  
+  .chat-input:focus {
+    outline: none;
+    background-color: #333;
+  }
+  
+  .send-button {
+    background-color: #00bcd4;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .send-button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Footer */
+  .chat-footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 20px;
+  }
+  
+  .chat-footer p {
+    font-size: 0.9em;
+  }
+  
+  /* Add typing animation */
+  .typing-indicator {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #777;
+    animation: typing 1.5s infinite steps(5);
+  }
+  
+  @keyframes typing {
+    0% {
+      content: ".";
+    }
+    25% {
+      content: "..";
+    }
+    50% {
+      content: "...";
+    }
+    75% {
+      content: "..";
+    }
+    100% {
+      content: ".";
+    }
+  }
+  
